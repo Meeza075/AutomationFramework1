@@ -28,7 +28,7 @@ public class ToCreateContactTest extends BaseClass {
 		String LASTNAME = eutil.toReadDataFromExcelFile("Contact", 1, 2);
 		ccp.getLastname().sendKeys(LASTNAME);
 		ccp.getSaveButton().click();
-		Assert.fail();
+		//Assert.fail();
 		ContactInforamtionPage cip = new ContactInforamtionPage(driver);
 		String lastname = cip.getContactInformation().getText();
 		Assert.assertTrue(lastname.contains(LASTNAME));
